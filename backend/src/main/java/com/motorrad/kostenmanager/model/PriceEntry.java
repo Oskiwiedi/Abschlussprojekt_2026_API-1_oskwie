@@ -29,7 +29,7 @@ public class PriceEntry {
     @Column(nullable = false)
     private String shopName;
 
-    @Column(nullable = false)
+    @Column(length = 1000)
     private String url;
 
     @Column(nullable = false)
