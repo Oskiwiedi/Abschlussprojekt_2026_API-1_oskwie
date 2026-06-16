@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import api from '../api/axiosInstance'
 
 const KATEGORIEN = [
@@ -17,6 +17,11 @@ function ExpenseForm(props) {
     const [description, setDescription] = useState('')
     const [date, setDate] = useState('')
     const [motorcycleId, setMotorcycleId] = useState('')
+    const [motorcycles, setMotorcycles] = useState([])
+
+    useEffect(() => {
+        api.get('/motorcycles').then(res => setMotorcycles(res.data))
+    }, [])
 
     const handleSubmit = async () => {
         await api.post(`/expenses?motorcycleId=${motorcycleId}`, {
@@ -64,13 +69,16 @@ function ExpenseForm(props) {
                     onChange={(e) => setDate(e.target.value)}
                     className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
                 />
-                <input
-                    type="number"
-                    placeholder="Motorrad ID"
+                <select
                     value={motorcycleId}
                     onChange={(e) => setMotorcycleId(e.target.value)}
-                    className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
-                />
+                    className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400 bg-white/5 text-white"
+                >
+                    <option value="">Motorrad wählen</option>
+                    {motorcycles.map(m => (
+                        <option key={m.id} value={m.id}>{m.brand} {m.model} ({m.year})</option>
+                    ))}
+                </select>
                 <button
                     onClick={handleSubmit}
                     className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 rounded-lg transition"

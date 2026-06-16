@@ -1,7 +1,7 @@
 import { useState } from "react";
 import api from "../api/axiosInstance.js";
 
-function MotorcycleForm() {
+function MotorcycleForm(props) {
     const [brand, setBrand] = useState('')
     const [model, setModel] = useState('')
     const [year, setYear] = useState('')
@@ -9,6 +9,7 @@ function MotorcycleForm() {
 
     const handleSubmit = async () => {
         await api.post('/motorcycles', { brand, model, year, licensePlate })
+        props.onSave()
         setBrand('')
         setModel('')
         setYear('')
