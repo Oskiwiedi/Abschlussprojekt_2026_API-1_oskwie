@@ -6,15 +6,24 @@ import api from "../api/axiosInstance.js";
 function Motorcycles() {
     const [motorcycles, setMotorcycles] = useState([])
 
-    useEffect(() => {
+    const fetchMotorcycles = () => {
         api.get('/motorcycles').then(res => setMotorcycles(res.data))
+    }
+
+    const handleDelete = async (id) => {
+        await api.delete(`/motorcycles/${id}`)
+        fetchMotorcycles()
+    }
+
+    useEffect(() => {
+        fetchMotorcycles()
     }, [])
 
     return (
         <div className="p-6">
             <PageHeader title="Meine Motorräder" />
             <div className="mt-6">
-                <MotorcycleForm />
+                <MotorcycleForm onSave={fetchMotorcycles} />
             </div>
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {motorcycles.map(motorcycle => (
@@ -22,6 +31,12 @@ function Motorcycles() {
                         <h3 className="text-xl font-bold text-white">{motorcycle.brand} {motorcycle.model}</h3>
                         <p className="text-white/60 mt-1">Jahrgang: {motorcycle.year}</p>
                         <p className="text-white/60">Kennzeichen: {motorcycle.licensePlate}</p>
+                        <button
+                            onClick={() => handleDelete(motorcycle.id)}
+                            className="mt-4 bg-red-500 hover:bg-red-600 text-white px-4 py-1 rounded-lg text-sm"
+                        >
+                            Löschen
+                        </button>
                     </div>
                 ))}
             </div>

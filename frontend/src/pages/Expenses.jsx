@@ -11,6 +11,11 @@ function Expenses() {
         api.get('/expenses').then(res => setExpenses(res.data))
     }
 
+    const handleDelete = async (id) => {
+        await api.delete(`/expenses/${id}`)
+        fetchExpenses()
+    }
+
     useEffect(() => {
         fetchExpenses()
     }, [])
@@ -38,6 +43,12 @@ function Expenses() {
                         <p className="text-white/60 mt-1">Kategorie: {expense.category}</p>
                         <p className="text-white/60">Beschreibung: {expense.description}</p>
                         <p className="text-white/60">Datum: {expense.date}</p>
+                        <button
+                            onClick={() => handleDelete(expense.id)}
+                            className="mt-4 bg-red-500 hover:bg-red-600 text-white px-4 py-1 rounded-lg text-sm"
+                        >
+                            Löschen
+                        </button>
                     </div>
                 ))}
             </div>
