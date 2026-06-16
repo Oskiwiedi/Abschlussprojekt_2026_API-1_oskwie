@@ -5,16 +5,19 @@ import api from "../api/axiosInstance.js";
 function Products() {
     const [products, setProducts] = useState([])
     const [query, setQuery] = useState('')
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         api.get('/products').then(res => setProducts(res.data))
     }, [])
 
     const handleSearch = async () => {
+        setLoading(true)
         await api.post(`/scraping/fetch?query=${query}`)
-        await new Promise(resolve => setTimeout(resolve, 1000))
+        await new Promise(resolve => setTimeout(resolve, 3000))
         const res = await api.get('/products')
         setProducts(res.data)
+        setLoading(false)
     }
 
     return (
@@ -28,7 +31,7 @@ function Products() {
                     className="bg-white/5 border border-white/10 rounded-xl p-3 text-white w-full"
                 />
                 <button onClick={handleSearch} className="bg-orange-500 text-white px-6 py-3 rounded-xl">
-                    Suchen
+                    {loading ? 'Suche läuft...' : 'Suchen'}
                 </button>
             </div>
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
