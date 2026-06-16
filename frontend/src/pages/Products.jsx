@@ -6,6 +6,7 @@ function Products() {
     const [products, setProducts] = useState([])
     const [query, setQuery] = useState('')
     const [loading, setLoading] = useState(false)
+    const [sortOrder, setSortOrder] = useState('asc')
 
     useEffect(() => {
         api.get('/products').then(res => setProducts(res.data))
@@ -20,6 +21,11 @@ function Products() {
         setLoading(false)
     }
 
+    const sortedProducts = [...products].sort((a, b) => {
+        if (sortOrder === 'asc') return a.price - b.price
+        return b.price - a.price
+    })
+
     return (
         <div className="p-6">
             <PageHeader title="Preisvergleich" />
@@ -30,12 +36,20 @@ function Products() {
                     placeholder="z.B. motorrad bremsbelaege"
                     className="bg-white/5 border border-white/10 rounded-xl p-3 text-white w-full"
                 />
+                <select
+                    value={sortOrder}
+                    onChange={e => setSortOrder(e.target.value)}
+                    className="bg-white/5 border border-white/10 rounded-xl p-3 text-white"
+                >
+                    <option value="asc">Preis aufsteigend</option>
+                    <option value="desc">Preis absteigend</option>
+                </select>
                 <button onClick={handleSearch} className="bg-orange-500 text-white px-6 py-3 rounded-xl">
                     {loading ? 'Suche läuft...' : 'Suchen'}
                 </button>
             </div>
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {products.map(product => (
+                {sortedProducts.map(product => (
                     <div key={product.id} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6">
                         {product.imageUrl && (
                             <img src={product.imageUrl} alt={product.name} className="w-full h-48 object-contain mb-4" />
