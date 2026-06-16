@@ -59,6 +59,10 @@ public class EbayScrapingService {
     }
 
     public void fetchMotorcycleParts(String searchQuery) throws Exception {
+        // Alte Produkte und Preise löschen
+        priceEntryRepository.deleteAll();
+        productRepository.deleteAll();
+
         String token = getAccessToken();
 
         RestTemplate restTemplate = new RestTemplate();
@@ -70,7 +74,7 @@ public class EbayScrapingService {
         HttpEntity<String> request = new HttpEntity<>(headers);
 
         String url = "https://api.ebay.com/buy/browse/v1/item_summary/search?q="
-                + searchQuery + "&category_ids=10063&limit=10";
+                + searchQuery + "&limit=10";
 
         ResponseEntity<Map> response = restTemplate.exchange(url, HttpMethod.GET, request, Map.class);
 
