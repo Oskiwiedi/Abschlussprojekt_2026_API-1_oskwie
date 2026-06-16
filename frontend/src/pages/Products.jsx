@@ -37,8 +37,18 @@ function Products() {
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {products.map(product => (
                     <div key={product.id} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6">
+                        {product.imageUrl && (
+                            <img src={product.imageUrl} alt={product.name} className="w-full h-48 object-contain mb-4" />
+                        )}
                         <h3 className="text-white font-bold">{product.name}</h3>
-                        <p className="text-white/60 mt-1">{product.description}</p>
+                        {product.price && (
+                            <p className="text-orange-400 font-bold mt-2">{product.price} €</p>
+                        )}
+                        {product.url && (
+                            <a href={product.url} target="_blank" className="text-white/60 text-sm mt-2 block hover:text-orange-400">
+                                Auf eBay ansehen →
+                            </a>
+                        )}
                     </div>
                 ))}
             </div>

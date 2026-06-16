@@ -88,9 +88,14 @@ public class EbayScrapingService {
                 String priceValue = (String) priceMap.get("value");
                 String itemUrl = (String) item.get("itemWebUrl");
 
+                // Bild holen
+                Map<String, Object> imageMap = (Map<String, Object>) item.get("image");
+                String imageUrl = imageMap != null ? (String) imageMap.get("imageUrl") : null;
+
                 Product product = new Product();
                 product.setName(title);
                 product.setDescription("eBay Produkt");
+                product.setImageUrl(imageUrl);
                 productRepository.save(product);
 
                 PriceEntry priceEntry = new PriceEntry();

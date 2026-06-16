@@ -1,5 +1,6 @@
 package com.motorrad.kostenmanager.controller;
 
+import com.motorrad.kostenmanager.model.ProductWithPriceDto;
 import com.motorrad.kostenmanager.model.Product;
 import com.motorrad.kostenmanager.service.ProductService;
 import org.springframework.web.bind.annotation.*;
@@ -16,8 +17,8 @@ public class ProductController {
     }
 
     @GetMapping
-    public List<Product> getAll() {
-        return productService.getAllProducts();
+    public List<ProductWithPriceDto> getAll() {
+        return productService.getAllProductsWithPrice();
     }
 
     @GetMapping("/{id}")
