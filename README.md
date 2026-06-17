@@ -60,6 +60,7 @@ Erstelle `frontend/.env`:
 VITE_API_URL=http://localhost:8080/api
 
 ## Projekt Struktur
+```
 ├── backend/
 │   ├── src/main/java/com/motorrad/kostenmanager/
 │   │   ├── controller/
@@ -68,10 +69,11 @@ VITE_API_URL=http://localhost:8080/api
 │   │   └── service/
 │   └── Dockerfile
 └── frontend/
-└── src/
-├── api/
-├── components/
-└── pages/
+    └── src/
+        ├── api/
+        ├── components/
+        └── pages/
+```
 
 ## API Endpunkte
 
