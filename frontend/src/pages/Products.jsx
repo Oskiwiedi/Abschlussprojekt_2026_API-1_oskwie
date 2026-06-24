@@ -1,3 +1,7 @@
+// Products.jsx
+// Preisvergleichsseite – sucht Motorradteile via eBay-API und zeigt Ergebnisse sortierbar an
+// Author: Oskar Wiederhold
+
 import PageHeader from "../components/PageHeader.jsx";
 import { useEffect, useState } from "react";
 import api from "../api/axiosInstance.js";
@@ -15,12 +19,14 @@ function Products() {
     const handleSearch = async () => {
         setLoading(true)
         await api.post(`/scraping/fetch?query=${query}`)
+        // 3 Sekunden warten, damit das Backend genug Zeit hat, die eBay-Daten zu verarbeiten und zu speichern
         await new Promise(resolve => setTimeout(resolve, 3000))
         const res = await api.get('/products')
         setProducts(res.data)
         setLoading(false)
     }
 
+    // Kopie des Arrays erstellen vor dem Sortieren, um den State nicht direkt zu verändern
     const sortedProducts = [...products].sort((a, b) => {
         if (sortOrder === 'asc') return a.price - b.price
         return b.price - a.price

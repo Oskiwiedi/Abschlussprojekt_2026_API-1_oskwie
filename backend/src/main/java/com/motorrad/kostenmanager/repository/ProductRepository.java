@@ -1,3 +1,7 @@
+// ProductRepository.java
+// Spring Data JPA Repository für Produkte – stellt automatisch alle CRUD-Methoden bereit
+// Author: Oskar Wiederhold
+
 package com.motorrad.kostenmanager.repository;
 import com.motorrad.kostenmanager.model.Product;
 

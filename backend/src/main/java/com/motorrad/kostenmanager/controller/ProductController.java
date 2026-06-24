@@ -1,3 +1,7 @@
+// ProductController.java
+// REST-Controller für Produkte – stellt CRUD-Endpunkte unter /api/products bereit
+// Author: Oskar Wiederhold
+
 package com.motorrad.kostenmanager.controller;
 
 import com.motorrad.kostenmanager.model.ProductWithPriceDto;
@@ -16,6 +20,7 @@ public class ProductController {
         this.productService = productService;
     }
 
+    // Gibt Produkte mit ihrem aktuellen Preis zurück (zusammengeführt aus Product und PriceEntry)
     @GetMapping
     public List<ProductWithPriceDto> getAll() {
         return productService.getAllProductsWithPrice();

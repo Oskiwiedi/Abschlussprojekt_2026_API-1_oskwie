@@ -1,3 +1,7 @@
+// MotorcycleForm.jsx
+// Formular zum Hinzufügen eines neuen Motorrads mit Marke, Modell, Baujahr und Kennzeichen
+// Author: Oskar Wiederhold
+
 import { useState } from "react";
 import api from "../api/axiosInstance.js";
 
@@ -9,6 +13,7 @@ function MotorcycleForm(props) {
 
     const handleSubmit = async () => {
         await api.post('/motorcycles', { brand, model, year, licensePlate })
+        // Eltern-Komponente benachrichtigen und alle Felder zurücksetzen
         props.onSave()
         setBrand('')
         setModel('')

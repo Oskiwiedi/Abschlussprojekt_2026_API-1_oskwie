@@ -1,3 +1,7 @@
+// WebConfig.java
+// Konfiguriert CORS-Einstellungen, damit das Frontend auf die Backend-API zugreifen darf
+// Author: Oskar Wiederhold
+
 package com.motorrad.kostenmanager.config;
 
 import org.springframework.context.annotation.Bean;
@@ -13,6 +17,7 @@ public class WebConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
+                // Erlaubt API-Zugriff vom lokalen Entwicklungsserver und dem produktiven Frontend
                 registry.addMapping("/api/**")
                         .allowedOrigins(
                                 "http://localhost:5173",

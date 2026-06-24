@@ -1,6 +1,11 @@
+// ExpenseForm.jsx
+// Formular zum Erfassen einer neuen Ausgabe – verknüpft Ausgaben mit einem Motorrad
+// Author: Oskar Wiederhold
+
 import { useState, useEffect } from 'react'
 import api from '../api/axiosInstance'
 
+// Vordefinierte Ausgabenkategorien für den Kategorie-Dropdown
 const KATEGORIEN = [
     'Benzin',
     'Service',
@@ -19,14 +24,17 @@ function ExpenseForm(props) {
     const [motorcycleId, setMotorcycleId] = useState('')
     const [motorcycles, setMotorcycles] = useState([])
 
+    // Motorradliste beim ersten Rendern laden, damit der Dropdown befüllt werden kann
     useEffect(() => {
         api.get('/motorcycles').then(res => setMotorcycles(res.data))
     }, [])
 
     const handleSubmit = async () => {
+        // motorcycleId als Query-Parameter, da die Verknüpfung zum Motorrad serverseitig erfolgt
         await api.post(`/expenses?motorcycleId=${motorcycleId}`, {
             amount, category, description, date
         })
+        // Eltern-Komponente informieren und Formular zurücksetzen
         props.onSave()
         setAmount('')
         setCategory('')

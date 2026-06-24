@@ -1,3 +1,7 @@
+// PriceEntryController.java
+// REST-Controller für Preiseinträge – stellt CRUD-Endpunkte unter /api/price-entries bereit
+// Author: Oskar Wiederhold
+
 package com.motorrad.kostenmanager.controller;
 
 import com.motorrad.kostenmanager.model.PriceEntry;

@@ -1,3 +1,7 @@
+// ProductService.java
+// Service-Schicht für Produkte – kombiniert Produktdaten mit dem zugehörigen Preis-Eintrag
+// Author: Oskar Wiederhold
+
 package com.motorrad.kostenmanager.service;
 
 import com.motorrad.kostenmanager.model.Product;
@@ -19,6 +23,7 @@ public class ProductService {
         this.priceEntryRepository = priceEntryRepository;
     }
 
+    // Für jedes Produkt den passenden Preis-Eintrag suchen und zu einem DTO zusammenführen
     public List<ProductWithPriceDto> getAllProductsWithPrice() {
         return productRepository.findAll().stream()
                 .map(product -> {

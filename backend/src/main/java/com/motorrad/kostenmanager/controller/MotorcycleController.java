@@ -1,3 +1,7 @@
+// MotorcycleController.java
+// REST-Controller für Motorräder – stellt CRUD-Endpunkte unter /api/motorcycles bereit
+// Author: Oskar Wiederhold
+
 package com.motorrad.kostenmanager.controller;
 
 import com.motorrad.kostenmanager.model.Motorcycle;

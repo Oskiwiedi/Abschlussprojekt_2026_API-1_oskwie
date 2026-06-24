@@ -1,3 +1,7 @@
+// ProductWithPriceDto.java
+// Datentransferobjekt, das ein Produkt mit seinem aktuellen Preis und der Shop-URL kombiniert
+// Author: Oskar Wiederhold
+
 package com.motorrad.kostenmanager.model;
 
 import lombok.AllArgsConstructor;

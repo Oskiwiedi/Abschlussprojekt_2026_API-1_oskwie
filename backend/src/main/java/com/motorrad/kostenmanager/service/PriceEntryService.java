@@ -1,3 +1,7 @@
+// PriceEntryService.java
+// Service-Schicht für Preiseinträge – kapselt alle Datenbankzugriffe für CRUD-Operationen
+// Author: Oskar Wiederhold
+
 package com.motorrad.kostenmanager.service;
 
 import com.motorrad.kostenmanager.model.PriceEntry;

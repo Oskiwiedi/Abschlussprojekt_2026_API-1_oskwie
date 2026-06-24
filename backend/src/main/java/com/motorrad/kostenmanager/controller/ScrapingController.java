@@ -1,9 +1,8 @@
-package com.motorrad.kostenmanager.controller;
+// ScrapingController.java
+// REST-Controller zum Auslösen des eBay-Scrapings – Endpunkt unter /api/scraping/fetch
+// Author: Oskar Wiederhold
 
-// ====================================================
-// HINWEIS: Dieser Controller wurde mit Unterstützung
-// von KI (Claude) erstellt und angepasst.
-// ====================================================
+package com.motorrad.kostenmanager.controller;
 
 import com.motorrad.kostenmanager.service.EbayScrapingService;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +24,7 @@ public class ScrapingController {
             ebayScrapingService.fetchMotorcycleParts(query);
             return ResponseEntity.ok("Produkte erfolgreich geholt!");
         } catch (Exception e) {
+            // Fehlerdetails im Response-Body zurückgeben, damit das Frontend informiert wird
             return ResponseEntity.status(500).body("Fehler: " + e.getMessage());
         }
     }

@@ -1,3 +1,7 @@
+// ExpenseController.java
+// REST-Controller für Ausgaben – stellt CRUD-Endpunkte unter /api/expenses bereit
+// Author: Oskar Wiederhold
+
 package com.motorrad.kostenmanager.controller;
 
 import com.motorrad.kostenmanager.model.Expense;
@@ -25,6 +29,7 @@ public class ExpenseController {
         return expenseService.getExpenseById(id);
     }
 
+    // motorcycleId als Query-Parameter, damit das Backend die Verknüpfung zum Motorrad herstellen kann
     @PostMapping
     public Expense create(@RequestBody Expense expense, @RequestParam Long motorcycleId) {
         return expenseService.createExpense(expense, motorcycleId);

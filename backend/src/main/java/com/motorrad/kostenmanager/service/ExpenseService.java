@@ -1,3 +1,7 @@
+// ExpenseService.java
+// Service-Schicht für Ausgaben – enthält Geschäftslogik und verknüpft Ausgaben mit Motorrädern
+// Author: Oskar Wiederhold
+
 package com.motorrad.kostenmanager.service;
 
 import com.motorrad.kostenmanager.model.Expense;
@@ -27,6 +31,7 @@ public class ExpenseService {
     }
 
     public Expense createExpense(Expense expense, Long motorcycleId) {
+        // Motorrad aus der Datenbank laden und der Ausgabe zuweisen, bevor sie gespeichert wird
         Motorcycle motorcycle = motorcycleRepository.findById(motorcycleId)
                 .orElseThrow();
         expense.setMotorcycle(motorcycle);

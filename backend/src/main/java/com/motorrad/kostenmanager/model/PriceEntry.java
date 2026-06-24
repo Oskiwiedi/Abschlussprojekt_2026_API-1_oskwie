@@ -1,5 +1,9 @@
 
 
+// PriceEntry.java
+// JPA-Entity für einen Preis-Eintrag – verknüpft einen Preis mit dem zugehörigen Produkt und Abfragezeitpunkt
+// Author: Oskar Wiederhold
+
 package com.motorrad.kostenmanager.model;
 
 import jakarta.persistence.*;
@@ -35,6 +39,7 @@ public class PriceEntry {
     @Column(nullable = false)
     private LocalDateTime fetchedAt;
 
+    // Jeder Preis-Eintrag gehört genau einem Produkt (n:1 Beziehung, Fremdschlüssel: product_id)
     @ManyToOne
     @JoinColumn(name = "product_id", nullable = false)
     private Product product;

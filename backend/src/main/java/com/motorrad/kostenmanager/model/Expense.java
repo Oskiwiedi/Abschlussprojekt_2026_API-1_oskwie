@@ -1,3 +1,7 @@
+// Expense.java
+// JPA-Entity für eine Ausgabe – repräsentiert einen Kosteneintrag, der einem Motorrad zugeordnet ist
+// Author: Oskar Wiederhold
+
 package com.motorrad.kostenmanager.model;
 
 import jakarta.persistence.*;
@@ -31,6 +35,7 @@ public class Expense {
 
     private Date date;
 
+    // Jede Ausgabe gehört genau einem Motorrad (n:1 Beziehung, Fremdschlüssel: motorcycle_id)
     @ManyToOne
     @JoinColumn(name = "motorcycle_id", nullable = false)
     private Motorcycle motorcycle;

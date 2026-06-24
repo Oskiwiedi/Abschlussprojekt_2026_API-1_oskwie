@@ -1,3 +1,7 @@
+// Motorcycle.java
+// JPA-Entity für ein Motorrad – speichert Marke, Modell, Baujahr und Kennzeichen
+// Author: Oskar Wiederhold
+
 package com.motorrad.kostenmanager.model;
 
 import jakarta.persistence.*;

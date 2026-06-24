@@ -1,9 +1,8 @@
-package com.motorrad.kostenmanager.service;
+// EbayScrapingService.java
+// Service zum Abrufen von Motorradteilen via eBay-API und Speichern der Ergebnisse in der Datenbank
+// Author: Oskar Wiederhold
 
-// ====================================================
-// HINWEIS: Dieser Service wurde mit Unterstützung von
-// KI (Claude) erstellt und angepasst.
-// ====================================================
+package com.motorrad.kostenmanager.service;
 
 import com.motorrad.kostenmanager.model.PriceEntry;
 import com.motorrad.kostenmanager.model.Product;
@@ -35,6 +34,7 @@ public class EbayScrapingService {
         this.priceEntryRepository = priceEntryRepository;
     }
 
+    // OAuth2-Token von der eBay-API holen – wird für alle nachfolgenden API-Anfragen benötigt
     private String getAccessToken() throws Exception {
         String credentials = appId + ":" + certId;
         String encodedCredentials = Base64.getEncoder().encodeToString(credentials.getBytes());
@@ -59,7 +59,7 @@ public class EbayScrapingService {
     }
 
     public void fetchMotorcycleParts(String searchQuery) throws Exception {
-        // Alte Produkte und Preise löschen
+        // Bestehende Produkte und Preise löschen, damit die Suche immer aktuelle Ergebnisse liefert
         priceEntryRepository.deleteAll();
         productRepository.deleteAll();
 
@@ -88,7 +88,7 @@ public class EbayScrapingService {
                 String priceValue = (String) priceMap.get("value");
                 String itemUrl = (String) item.get("itemWebUrl");
 
-                // Bild holen
+                // Bild-URL extrahieren (kann null sein, falls kein Bild im eBay-Antwort-Objekt vorhanden)
                 Map<String, Object> imageMap = (Map<String, Object>) item.get("image");
                 String imageUrl = imageMap != null ? (String) imageMap.get("imageUrl") : null;
 

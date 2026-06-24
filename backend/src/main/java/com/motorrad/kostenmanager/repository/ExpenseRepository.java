@@ -1,3 +1,7 @@
+// ExpenseRepository.java
+// Spring Data JPA Repository für Ausgaben – stellt automatisch alle CRUD-Methoden bereit
+// Author: Oskar Wiederhold
+
 package com.motorrad.kostenmanager.repository;
 import com.motorrad.kostenmanager.model.Expense;
 

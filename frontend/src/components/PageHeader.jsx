@@ -1,3 +1,7 @@
+// PageHeader.jsx
+// Wiederverwendbare Seitenkopf-Komponente mit Titel und unterer Trennlinie
+// Author: Oskar Wiederhold
+
 function PageHeader({ title }) {
     return (
         <div className="px-6 py-6 border-b border-white/10">
