@@ -1,6 +1,6 @@
 // Navbar.jsx
-// Responsive Navigationsleiste mit Desktop-Links und mobilem Hamburger-Menü
-// Author: Oskar Wiederhold
+// Responsive Navigationsleiste mit Desktop Links und mobilem Hamburger Menü
+// Autor: Oskar Wiederhold
 
 import { Link } from 'react-router-dom'
 import { useState } from 'react'

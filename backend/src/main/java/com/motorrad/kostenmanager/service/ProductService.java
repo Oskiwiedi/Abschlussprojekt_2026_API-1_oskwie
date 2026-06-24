@@ -1,6 +1,6 @@
 // ProductService.java
-// Service-Schicht für Produkte – kombiniert Produktdaten mit dem zugehörigen Preis-Eintrag
-// Author: Oskar Wiederhold
+// Serviceschicht für Produkte, kombiniert Produktdaten mit dem zugehörigen Preiseintrag
+// Autor: Oskar Wiederhold
 
 package com.motorrad.kostenmanager.service;
 

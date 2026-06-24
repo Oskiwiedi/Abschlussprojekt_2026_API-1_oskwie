@@ -1,6 +1,6 @@
 // KostenManagerApplication.java
-// Einstiegspunkt der Spring Boot Anwendung – startet den eingebetteten Webserver
-// Author: Oskar Wiederhold
+// Einstiegspunkt der Spring Boot Anwendung, startet den eingebetteten Webserver
+// Autor: Oskar Wiederhold
 
 package com.motorrad.kostenmanager;
 

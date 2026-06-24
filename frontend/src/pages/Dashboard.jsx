@@ -1,6 +1,6 @@
 // Dashboard.jsx
 // Übersichtsseite mit Kennzahlen zu Motorrädern, Gesamtausgaben und den letzten Einträgen
-// Author: Oskar Wiederhold
+// Autor: Oskar Wiederhold
 
 import PageHeader from "../components/PageHeader.jsx";
 import api from "../api/axiosInstance.js";

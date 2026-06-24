@@ -1,6 +1,6 @@
 // Product.java
-// JPA-Entity für ein Produkt aus dem eBay-Scraping – speichert Name, Beschreibung und Bild-URL
-// Author: Oskar Wiederhold
+// JPA Entity für ein Produkt aus dem eBay Scraping, speichert Name, Beschreibung und Bild URL
+// Autor: Oskar Wiederhold
 
 package com.motorrad.kostenmanager.model;
 

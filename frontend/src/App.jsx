@@ -1,6 +1,6 @@
 // App.jsx
-// Haupt-Komponente der Anwendung – definiert Routing und globales Seitenlayout
-// Author: Oskar Wiederhold
+// Hauptkomponente der Anwendung, definiert Routing und globales Seitenlayout
+// Autor: Oskar Wiederhold
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Dashboard from './pages/Dashboard.jsx'

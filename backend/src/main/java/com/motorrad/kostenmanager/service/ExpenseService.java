@@ -1,6 +1,6 @@
 // ExpenseService.java
-// Service-Schicht für Ausgaben – enthält Geschäftslogik und verknüpft Ausgaben mit Motorrädern
-// Author: Oskar Wiederhold
+// Serviceschicht für Ausgaben, enthält Geschäftslogik und verknüpft Ausgaben mit Motorrädern
+// Autor: Oskar Wiederhold
 
 package com.motorrad.kostenmanager.service;
 

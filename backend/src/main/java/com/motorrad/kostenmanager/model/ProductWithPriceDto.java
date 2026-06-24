@@ -1,6 +1,6 @@
 // ProductWithPriceDto.java
-// Datentransferobjekt, das ein Produkt mit seinem aktuellen Preis und der Shop-URL kombiniert
-// Author: Oskar Wiederhold
+// Datentransferobjekt, das ein Produkt mit seinem aktuellen Preis und der Shop URL kombiniert
+// Autor: Oskar Wiederhold
 
 package com.motorrad.kostenmanager.model;
 

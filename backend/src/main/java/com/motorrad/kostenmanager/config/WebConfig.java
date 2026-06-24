@@ -1,6 +1,6 @@
 // WebConfig.java
-// Konfiguriert CORS-Einstellungen, damit das Frontend auf die Backend-API zugreifen darf
-// Author: Oskar Wiederhold
+// Konfiguriert CORS Einstellungen, damit das Frontend auf die Backend API zugreifen darf
+// Autor: Oskar Wiederhold
 
 package com.motorrad.kostenmanager.config;
 

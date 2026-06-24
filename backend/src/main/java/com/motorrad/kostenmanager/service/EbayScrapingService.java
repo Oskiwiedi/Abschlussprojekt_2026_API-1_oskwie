@@ -1,6 +1,6 @@
 // EbayScrapingService.java
-// Service zum Abrufen von Motorradteilen via eBay-API und Speichern der Ergebnisse in der Datenbank
-// Author: Oskar Wiederhold
+// Service zum Abrufen von Motorradteilen via eBay API und Speichern der Ergebnisse in der Datenbank
+// Autor: Oskar Wiederhold
 
 package com.motorrad.kostenmanager.service;
 

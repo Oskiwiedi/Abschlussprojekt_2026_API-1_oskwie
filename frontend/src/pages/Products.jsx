@@ -1,6 +1,6 @@
 // Products.jsx
-// Preisvergleichsseite – sucht Motorradteile via eBay-API und zeigt Ergebnisse sortierbar an
-// Author: Oskar Wiederhold
+// Preisvergleichsseite, sucht Motorradteile via eBay API und zeigt Ergebnisse sortierbar an
+// Autor: Oskar Wiederhold
 
 import PageHeader from "../components/PageHeader.jsx";
 import { useEffect, useState } from "react";

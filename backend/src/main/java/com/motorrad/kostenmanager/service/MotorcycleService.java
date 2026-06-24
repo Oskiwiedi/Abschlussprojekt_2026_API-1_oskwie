@@ -1,6 +1,6 @@
 // MotorcycleService.java
-// Service-Schicht für Motorräder – kapselt alle Datenbankzugriffe für CRUD-Operationen
-// Author: Oskar Wiederhold
+// Serviceschicht für Motorräder, kapselt alle Datenbankzugriffe für CRUD Operationen
+// Autor: Oskar Wiederhold
 
 package com.motorrad.kostenmanager.service;
 

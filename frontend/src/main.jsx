@@ -1,6 +1,6 @@
 // main.jsx
-// Einstiegspunkt der React-Anwendung – rendert die App-Komponente in den DOM
-// Author: Oskar Wiederhold
+// Einstiegspunkt der React Anwendung, rendert die App Komponente in den DOM
+// Autor: Oskar Wiederhold
 
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'

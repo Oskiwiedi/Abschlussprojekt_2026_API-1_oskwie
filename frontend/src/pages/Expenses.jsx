@@ -1,6 +1,6 @@
 // Expenses.jsx
-// Seite zur Verwaltung von Ausgaben – zeigt Ausgabenliste, Erfassungsformular und Balkendiagramm nach Kategorie
-// Author: Oskar Wiederhold
+// Seite zur Verwaltung von Ausgaben, zeigt Ausgabenliste, Erfassungsformular und Balkendiagramm nach Kategorie
+// Autor: Oskar Wiederhold
 
 import ExpenseForm from "../components/ExpenseForm.jsx";
 import PageHeader from "../components/PageHeader.jsx";

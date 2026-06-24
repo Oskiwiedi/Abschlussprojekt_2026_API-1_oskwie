@@ -1,6 +1,6 @@
 // ExpenseController.java
-// REST-Controller für Ausgaben – stellt CRUD-Endpunkte unter /api/expenses bereit
-// Author: Oskar Wiederhold
+// REST Controller für Ausgaben, stellt CRUD Endpunkte unter /api/expenses bereit
+// Autor: Oskar Wiederhold
 
 package com.motorrad.kostenmanager.controller;
 

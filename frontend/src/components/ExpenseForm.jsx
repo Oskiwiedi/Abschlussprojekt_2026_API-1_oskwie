@@ -1,6 +1,6 @@
 // ExpenseForm.jsx
-// Formular zum Erfassen einer neuen Ausgabe – verknüpft Ausgaben mit einem Motorrad
-// Author: Oskar Wiederhold
+// Formular zum Erfassen einer neuen Ausgabe, verknüpft Ausgaben mit einem Motorrad
+// Autor: Oskar Wiederhold
 
 import { useState, useEffect } from 'react'
 import api from '../api/axiosInstance'

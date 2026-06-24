@@ -1,8 +1,6 @@
-
-
 // PriceEntry.java
-// JPA-Entity für einen Preis-Eintrag – verknüpft einen Preis mit dem zugehörigen Produkt und Abfragezeitpunkt
-// Author: Oskar Wiederhold
+// JPA Entity für einen Preiseintrag, verknüpft einen Preis mit dem zugehörigen Produkt und Abfragezeitpunkt
+// Autor: Oskar Wiederhold
 
 package com.motorrad.kostenmanager.model;
 

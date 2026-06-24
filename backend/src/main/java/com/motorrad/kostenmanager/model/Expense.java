@@ -1,6 +1,6 @@
 // Expense.java
-// JPA-Entity für eine Ausgabe – repräsentiert einen Kosteneintrag, der einem Motorrad zugeordnet ist
-// Author: Oskar Wiederhold
+// JPA Entity für eine Ausgabe, repräsentiert einen Kosteneintrag, der einem Motorrad zugeordnet ist
+// Autor: Oskar Wiederhold
 
 package com.motorrad.kostenmanager.model;
 

@@ -1,6 +1,6 @@
 // ScrapingController.java
-// REST-Controller zum Auslösen des eBay-Scrapings – Endpunkt unter /api/scraping/fetch
-// Author: Oskar Wiederhold
+// REST Controller zum Auslösen des eBay Scrapings, Endpunkt unter /api/scraping/fetch
+// Autor: Oskar Wiederhold
 
 package com.motorrad.kostenmanager.controller;
 

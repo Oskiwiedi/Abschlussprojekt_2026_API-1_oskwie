@@ -1,6 +1,6 @@
 // MotorcycleForm.jsx
 // Formular zum Hinzufügen eines neuen Motorrads mit Marke, Modell, Baujahr und Kennzeichen
-// Author: Oskar Wiederhold
+// Autor: Oskar Wiederhold
 
 import { useState } from "react";
 import api from "../api/axiosInstance.js";

@@ -1,6 +1,6 @@
 // ProductController.java
-// REST-Controller für Produkte – stellt CRUD-Endpunkte unter /api/products bereit
-// Author: Oskar Wiederhold
+// REST Controller für Produkte, stellt CRUD Endpunkte unter /api/products bereit
+// Autor: Oskar Wiederhold
 
 package com.motorrad.kostenmanager.controller;
 

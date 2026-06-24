@@ -1,6 +1,6 @@
 // Motorcycles.jsx
-// Seite zur Verwaltung der Motorräder – Anzeige, Hinzufügen und Löschen von Einträgen
-// Author: Oskar Wiederhold
+// Seite zur Verwaltung der Motorräder, Anzeige, Hinzufügen und Löschen von Einträgen
+// Autor: Oskar Wiederhold
 
 import PageHeader from "../components/PageHeader.jsx";
 import MotorcycleForm from "../components/MotorcycleForm.jsx";

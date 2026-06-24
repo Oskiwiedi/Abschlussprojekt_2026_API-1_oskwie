@@ -1,6 +1,6 @@
 // PageHeader.jsx
-// Wiederverwendbare Seitenkopf-Komponente mit Titel und unterer Trennlinie
-// Author: Oskar Wiederhold
+// Wiederverwendbare Seitenkopf Komponente mit Titel und unterer Trennlinie
+// Autor: Oskar Wiederhold
 
 function PageHeader({ title }) {
     return (

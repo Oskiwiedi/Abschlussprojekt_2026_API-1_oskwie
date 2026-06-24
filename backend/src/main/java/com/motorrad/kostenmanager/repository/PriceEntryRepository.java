@@ -1,6 +1,6 @@
 // PriceEntryRepository.java
-// Spring Data JPA Repository für Preiseinträge – mit benutzerdefinierter Suchmethode nach Produkt
-// Author: Oskar Wiederhold
+// Spring Data JPA Repository für Preiseinträge, mit benutzerdefinierter Suchmethode nach Produkt
+// Autor: Oskar Wiederhold
 
 package com.motorrad.kostenmanager.repository;
 
